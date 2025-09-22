@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "compile and run with i/o files",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-o",
+                "\"${fileDirname}\\\\${fileBasenameNoExtension}.exe\"",
+                "\"${file}\"",
+                "&&",
+                "\"${fileDirname}\\\\${fileBasenameNoExtension}.exe\"",
+                "<",
+                "\"${fileDirname}\\\\input.txt\"",
+                ">",
+                "\"${fileDirname}\\\\output.txt\""
+            ],
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

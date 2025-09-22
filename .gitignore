@@ -1,0 +1,17 @@
+# Executable files
+*.exe
+*.out
+
+# Output files
+output.txt
+
+# Test files
+simple.cpp
+test.cpp
+example_bits.cpp
+
+# VS Code settings (optional - uncomment if you want to ignore)
+# .vscode/
+
+# Claude artifacts
+.claude/
