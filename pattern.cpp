@@ -5,8 +5,13 @@ using namespace std;
 
 
 
-void print(int n) {
-    cout << n;
+void print1(int n) {
+    for(int i = 0; i < n; i++){
+		for(int j = 0 ; j < n ; j++){
+			cout << "*" << " ";
+		}
+		cout << endl;
+	}
 }
 
 int main() {
@@ -16,7 +21,7 @@ int main() {
 	for(int i = 0; i < t; i++){
 	    int n;
 	    cin >> n;
-	    print(n);
+	    print1(n);
 	    cout << endl;
 	}
 
