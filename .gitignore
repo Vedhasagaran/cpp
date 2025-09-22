@@ -3,6 +3,7 @@
 *.out
 
 # Output files
+input.txt
 output.txt
 
 # Test files

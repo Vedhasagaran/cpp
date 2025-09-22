@@ -2,47 +2,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile",
+            "label": "compile and run",
             "type": "shell",
-            "command": "g++",
+            "command": "C:/msys64/usr/bin/bash.exe",
             "args": [
-                "-std=c++17",
-                "-o",
-                "${fileBasenameNoExtension}",
-                "${file}"
+                "-c",
+                "cd '/d/Learning/cpp' && export PATH=/c/msys64/mingw64/bin:$PATH && rm -f \"${fileBasenameNoExtension}.exe\" && g++ -std=c++17 -o \"${fileBasenameNoExtension}\" \"${fileBasenameNoExtension}.cpp\" && ./${fileBasenameNoExtension} < input.txt > output.txt"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            }
-        },
-        {
-            "label": "compile and run with i/o files",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-std=c++17",
-                "-o",
-                "\"${fileDirname}\\\\${fileBasenameNoExtension}.exe\"",
-                "\"${file}\"",
-                "&&",
-                "\"${fileDirname}\\\\${fileBasenameNoExtension}.exe\"",
-                "<",
-                "\"${fileDirname}\\\\input.txt\"",
-                ">",
-                "\"${fileDirname}\\\\output.txt\""
-            ],
-            "options": {
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": ["/c"]
-                }
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": []
+            }
         }
     ]
 }
