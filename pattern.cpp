@@ -29,7 +29,7 @@ void print3(int n) {
 	}
 }
 
-void newPattern(int n){
+void floydTriangle(int n){
 	int a = 1;
 	for(int i = 1 ; i <= n ; i++){
 		for(int j = 1 ; j <= i; j++){
@@ -49,7 +49,7 @@ int main() {
 	for(int i = 0; i < t; i++){
 	    int n;
 	    cin >> n;
-	    newPattern(n);
+	    floydTriangle(n);
 	    cout << endl;
 	}
 
