@@ -233,6 +233,31 @@ void print18(int n){
 	}
 }
 
+void print19(int n){
+	for(int i = 0; i < 2*n; i++){
+		int stars = n-i;
+		int space = 2*i;
+
+		if(i >= n){ 
+			stars = i - n + 1;
+			space = 2 * (2*n - i - 1);
+		}
+		for(int j = 0; j < stars; j++){
+			cout << "*";
+		}
+
+		for(int j = 0; j < space ; j++){
+			cout << " ";
+		}
+
+		for(int j = 0; j < stars; j++){
+			cout << "*";
+		}
+
+		cout << endl;
+	}
+}
+
 
 
 int main() {
@@ -242,7 +267,7 @@ int main() {
 	for(int i = 0; i < t; i++){
 	    int n;
 	    cin >> n;
-	    print18(n);
+	    print19(n);
 	    cout << endl;
 	}
 
