@@ -60,8 +60,8 @@ void print5(int n){
 }
 
 void print6(int n){
-	for(int i = n; i > 0; i--){
-		for(int j=1; j<=i; j++){
+	for(int i = 0; i < n ; i++){
+		for(int j=1; j<= n-i; j++){
 			cout << j << " ";
 		}
 		cout << endl;
@@ -175,10 +175,17 @@ void print12(int n){
 
 void print14(int n){	
 	for(int i = 1 ; i <= n ; i++){
-		char a = 'A';
-		for(int j = 1 ; j <= i; j++){
-			cout << a  << " ";
-			a++;
+		for(int j = 0 ; j < i; j++){
+			cout << char('A'+j)  << " ";
+		}
+		cout << endl;
+	}
+}
+
+void print15(int n){
+	for(int i = 0; i < n ; i++){
+		for(int j =0; j < n-i; j++){
+			cout << char('A'+j) << " ";
 		}
 		cout << endl;
 	}
