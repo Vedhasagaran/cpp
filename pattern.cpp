@@ -158,6 +158,34 @@ void print11(int n){
 	}
 }
 
+void print12(int n){
+	for(int i = 1; i <= n; i++){
+		for(int j = 1; j <= i; j++){
+			cout << j << " ";
+		}
+		for(int j = 1; j <= 2*n-2*i; j++){
+			cout << " "<< " ";
+		}
+		for(int j = i; j > 0; j--){
+			cout << j << " ";
+		}
+		cout << endl;
+	}
+}
+
+void print14(int n){	
+	for(int i = 1 ; i <= n ; i++){
+		char a = 'A';
+		for(int j = 1 ; j <= i; j++){
+			cout << a  << " ";
+			a++;
+		}
+		cout << endl;
+	}
+}
+
+
+
 int main() {
 	int t;
 	cin >> t;
@@ -165,7 +193,7 @@ int main() {
 	for(int i = 0; i < t; i++){
 	    int n;
 	    cin >> n;
-	    print11(n);
+	    print14(n);
 	    cout << endl;
 	}
 
